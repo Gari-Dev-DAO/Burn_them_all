@@ -32,6 +32,7 @@
   margin-top: 4rem;
   overflow: hidden;
   padding: 0px 5% 100px 5%;
+  min-height: calc(100vh - 4rem);
 }
 
 .bonkBtn {
@@ -199,8 +200,11 @@ input[type="number"] {
   .aboutBonk{
    display: flex;
    flex-wrap: wrap;
-   margin-bottom: 20%;
+   margin-bottom: 20px;
    width: 80%;
+  }
+  .loading{
+    margin-top: 10%;
   }
 
   @media only screen and (max-width: 800px) {
@@ -214,4 +218,5 @@ input[type="number"] {
     .aboutBonk{
       width: 100%;
     }
+
   }

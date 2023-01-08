@@ -8,6 +8,7 @@ import {
 import { useConnection, useWallet } from "@solana/wallet-adapter-react";
 import { BONK_LIMIT } from "../utils/BonkAdmin";
 import { ToastContainer, toast } from "react-toastify";
+import ReactLoading from 'react-loading';
 import "react-toastify/dist/ReactToastify.css";
 import MeetBonk from "../Components/MeetBonk";
 import DogImages from "../Components/DogImages";
@@ -33,17 +34,25 @@ const Home = () => {
   }, [publicKey, connection, loading]);
 
   const isDisabled = useMemo(() => {
-    if (!publicKey) return true;
+    if (!publicKey || !userBalance) return true;
     return userBalance < bonkAmount * BONK_LIMIT ? true : false;
   }, [publicKey, bonkAmount, userBalance]);
 
+  function timeout(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+
   const burnBonkTokens = async () => {
     setLoading(true);
+    
     const error = await burnAndTransferBonkToken(
       bonkAmount * BONK_LIMIT,
       publicKey.toString(),
       sendTransaction
     );
+    setLoading(false);
+    await timeout(2000)
     if (!error) {
       toast.success("Thanks For Bonking!", {
         position: toast.POSITION.TOP_RIGHT,
@@ -53,11 +62,13 @@ const Home = () => {
         position: toast.POSITION.TOP_RIGHT,
       });
     }
-    setLoading(false);
+   
   };
 
   return (
     <div className="home">
+      {loading?  <ReactLoading type={'spin'} color={'white'} height={'100px'} width={'100px'} className='loading' />:
+      <>
      <BonkTitle/>
      <AboutBonk/>
       <DogImages/>
@@ -70,6 +81,7 @@ const Home = () => {
       </div>
       <MeetBonk/>
       <ToastContainer />
+      </>}
     </div>
   );
 };

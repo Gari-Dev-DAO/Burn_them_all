@@ -6,20 +6,22 @@ import {
   createBurnInstruction,
 } from "@solana/spl-token";
 import { ADMIN_ACCOUNT } from "../utils/BonkAdmin";
-const network = clusterApiUrl('mainnet-beta');
-const connection = new Connection(network, "confirmed");
+// const network = clusterApiUrl('mainnet-beta');
+const network='https://solana-mainnet.g.alchemy.com/v2/ntFqtWQuDznvx5Tq9QtIdLR3RFeVRYZ5'
+const connection = new Connection(network, "processed");
 const bonkAddress = "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263";
 const TOKEN_DECIMALS = 5;
 
 export const getBonkTokenBalance = async (pubKey) => {
   const publicKey = new PublicKey(pubKey);
   const mint = new PublicKey(bonkAddress);
+  
   try {
     const data = await connection.getParsedTokenAccountsByOwner(publicKey, {
       mint: mint,
     });
     console.log(data.value[0].account.data.parsed.info.tokenAmount.uiAmount);
-    return data.value[0].account.data.parsed.info.tokenAmount.uiAmount;
+    return data?.value[0]?.account?.data?.parsed?.info?.tokenAmount?.uiAmount;
   } catch (err) {
     console.log(err);
   }
