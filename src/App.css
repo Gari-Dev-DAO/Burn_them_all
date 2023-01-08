@@ -92,6 +92,7 @@
   );
   color: #ffffff;
   border: 0.5px solid #fed900;
+  text-align: center;
 }
 
 input::-webkit-outer-spin-button,
