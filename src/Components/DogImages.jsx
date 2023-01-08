@@ -2,7 +2,7 @@
 
 const DogImages = () => {
   return (
-    <div style={{height:'180px',display:'flex',flexWrap:'wrap'}}>
+    <div style={{display:'flex',flexWrap:'wrap',justifyContent:'center'}}>
      <div className='dogImgContainer'>
      <img src={require('../assests/Images/dogs.png')} alt='dog-seat' className='dogImgs'/>
      </div>

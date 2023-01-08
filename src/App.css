@@ -22,6 +22,10 @@
   align-items: center;
   color: #fed900;
 }
+.navLinkBox a {
+  display: flex;
+  margin: 10px;
+}
 
 .home {
   background: rgba(25, 29, 41, 0.95);
@@ -150,8 +154,9 @@ input[type="number"] {
   border-radius: 10px;
   background: rgba(25, 29, 41, 0.7);
   text-transform: uppercase;
- display: flex;
- margin: auto 30px;
+  display: flex;
+  margin: auto 30px;
+  margin-bottom: 10px;
 }
 
 .bonkTitleContainer {
@@ -183,40 +188,113 @@ input[type="number"] {
   width: 100px;
   margin: 30px;
 }
-.title p{
+.title p {
   font-size: 42px;
   font-weight: bold;
   text-align: right;
   line-height: 38px;
 }
-.burnText{
+.burnText {
   color: #ffffff;
   margin-right: 70px;
 }
-.emText
-  {
-    color: #FDB000;
-  }
-  .aboutBonk{
-   display: flex;
-   flex-wrap: wrap;
-   margin-bottom: 20px;
-   width: 80%;
-  }
-  .loading{
-    margin-top: 10%;
-  }
+.emText {
+  color: #fdb000;
+}
+.aboutBonk {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  width: 80%;
+  justify-content: center;
+}
+.loading {
+  margin-top: 10%;
+}
+.infoText {
+  color: #14d9e5;
+  width: 55%;
+}
 
-  @media only screen and (max-width: 800px) {
-    .title{
-      width: 100%;
-    }
-    .title p{
-      font-size: 24px;
-      line-height: 28px;
-    }
-    .aboutBonk{
-      width: 100%;
-    }
-
+@media only screen and (max-width: 800px) {
+  .title {
+    width: 100%;
   }
+  .title p {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .aboutBonk {
+    width: 100%;
+  }
+  .bonkAmount {
+    font-size: 24px;
+  }
+  .input {
+    height: 2rem;
+    width: 2.5rem;
+  }
+  .batImage {
+    height: 250px;
+    left: -25px;
+  }
+  .meetBonkImage {
+    height: 180px;
+    width: 150px;
+  }
+  .bonkBtn {
+    font-size: 20px;
+  }
+  .aboutBonk {
+    width: 100%;
+  }
+  .infoText {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .dogImgs {
+    width: "100%";
+    height: 140px;
+    object-fit: contain;
+  }
+  .meetBonk {
+    display: none;
+  }
+  .title p {
+    font-size: 1.2rem;
+  }
+  .burnText {
+    margin-right: 1rem;
+  }
+  .bonkLogo {
+    height: 70px;
+    width: 70px;
+  }
+  .infoText {
+    width: 100%;
+  }
+  .bonkAmount {
+    font-size: 1.2rem;
+  }
+  .bonkLimit {
+    font-size: 1rem;
+  }
+  .batImage {
+    height: 160px;
+    width: 180px;
+    left: 90px;
+    top: -80px;
+  }
+  .navBar{
+    flex-direction: column;
+    height: 6rem;
+    padding-top: 10px;
+  }
+  .navLinkBox a{
+    margin: 6px;
+  }
+  .home{
+    margin-top: 6rem;
+  }
+}
