@@ -4,81 +4,94 @@
   padding: 0;
 }
 
-.navBar{
+.navBar {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  height: 6rem;
-  background:   rgba(25, 29, 41,0.95);
+  height: 4rem;
+  background: rgba(25, 29, 41, 0.95);
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
 }
 
-.navLinkBox{
+.navLinkBox {
   display: flex;
-  flex-direction: 'row';
+  flex-direction: "row";
   align-items: center;
-  color:#FED900
+  color: #fed900;
 }
-.navLinkBox p{
-  margin: 30px;
-}
-.home{
-  min-height: calc(100vh - 6rem);
-  background:   rgba(25, 29, 41,0.95);
+
+.home {
+  background: rgba(25, 29, 41, 0.95);
   display: flex;
   align-items: center;
   flex-direction: column;
+  position: relative;
+  margin-top: 4rem;
+  overflow: hidden;
+  padding: 0px 5% 100px 5%;
 }
-.bonkBtn{
-  background: radial-gradient(90.16% 143.01% at 15.32% 21.04%, rgba(165, 239, 255, 0.2) 0%, rgba(110, 191, 244, 0.0447917) 77.08%, rgba(70, 144, 213, 0) 100%);
-  color:#FFFFFF;
+
+.bonkBtn {
+  background: radial-gradient(
+    90.16% 143.01% at 15.32% 21.04%,
+    rgba(165, 239, 255, 0.2) 0%,
+    rgba(110, 191, 244, 0.0447917) 77.08%,
+    rgba(70, 144, 213, 0) 100%
+  );
+  color: #ffffff;
   font-size: 30px;
   font-weight: 600;
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-top: 7px;
-  padding-bottom: 7px;
+  padding: 7px 24px;
   border-radius: 10px;
   cursor: pointer;
-  border: 0.5px solid #FED900;
+  border: 0.5px solid #fed900;
+  margin: auto;
 }
-.bonkBtn[disabled]{
- cursor: not-allowed;
- opacity: 0.4;
+.bonkBtn[disabled] {
+  cursor: not-allowed;
+  opacity: 0.4;
 }
 
-
-.bonkAmount{
+.bonkAmount {
   font-weight: 800;
   font-size: 32px;
-  color:#FEC200;
- 
+  color: #fec200;
 }
-.bonkLimit{
-   font-size: 20px;
-   color: #FEC200;
-   font-weight: 800;
+
+.bonkLimit {
+  font-size: 20px;
+  color: #fec200;
+  font-weight: 800;
 }
-.bonkInput{
+
+.bonkInput {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 26px;
+  margin: 20px 0px;
 }
-.input{
+
+.input {
   height: 2.5rem;
   width: 3rem;
   font-size: 1.5rem;
   border-radius: 5px;
-  padding: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 5px 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(90.16% 143.01% at 15.32% 21.04%, rgba(165, 239, 255, 0.2) 0%, rgba(110, 191, 244, 0.0447917) 77.08%, rgba(70, 144, 213, 0) 100%);
-  color: #FFFFFF;
-  border: 0.5px solid #FED900;
+  background: radial-gradient(
+    90.16% 143.01% at 15.32% 21.04%,
+    rgba(165, 239, 255, 0.2) 0%,
+    rgba(110, 191, 244, 0.0447917) 77.08%,
+    rgba(70, 144, 213, 0) 100%
+  );
+  color: #ffffff;
+  border: 0.5px solid #fed900;
 }
 
 input::-webkit-outer-spin-button,
@@ -88,6 +101,97 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
+
+.bonkBox {
+  position: relative;
+  width: 500px;
+  display: flex;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.batImage {
+  height: 300px;
+  position: absolute;
+  left: -90px;
+}
+
+.meetBonk {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.meetBonkImage {
+  height: 250px;
+  width: 220px;
+}
+
+.dogImgContainer {
+  display: flex;
+}
+
+.dogImgs {
+  width: 600px;
+  height: 200px;
+}
+
+.nftbtn {
+  color: #14d9e5;
+  padding: 5px 16px;
+  border: 1px solid #14d9e5;
+  margin: auto;
+  background-color: "transparent";
+  border-radius: 10px;
+  background: rgba(25, 29, 41, 0.7);
+  text-transform: uppercase;
+ display: flex;
+ margin: auto 30px;
+}
+
+.bonkTitleContainer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 140px;
+}
+.title {
+  width: 60%;
+  background-image: url("./assests/Images/GETSETBONK.png");
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100px;
+  padding-top: 10px;
+}
+
+.link {
+  text-decoration: none;
+  color: #fec200;
+  display: block;
+  margin: 40px;
+}
+
+.bonkLogo {
+  height: 100px;
+  width: 100px;
+  margin: 30px;
+}
+.title p{
+  font-size: 42px;
+  font-weight: bold;
+  text-align: right;
+  line-height: 38px;
+}
+.burnText{
+  color: #ffffff;
+  margin-right: 70px;
+}
+.emText
+  {
+    color: #FDB000;
+  }

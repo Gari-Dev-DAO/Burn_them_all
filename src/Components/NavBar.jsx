@@ -4,12 +4,11 @@ const NavBar = () => {
   return (
     <div className='navBar'>
         <div className="navLinkBox">
-         <p>Go bank Err</p>
+         <a className="link">Go bonk Errs</a>
         </div>
         <div  className="navLinkBox" >
-        <p>buy Bonk</p>
-         <p>Telegram</p>
-         <p>LeaderBoard</p>
+        <a href="https://www.coingecko.com/en/coins/bonk" target='_blank' className="link">Buy Bonk</a>
+         <a href="https://web.telegram.org/k/#-813184380" target='_blank' className="link">Telegram</a>
         </div>
         <div className="navLinkBox">
      <ConnetWalletButton/>

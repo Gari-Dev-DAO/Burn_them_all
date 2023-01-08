@@ -9,6 +9,11 @@ import { useConnection, useWallet } from "@solana/wallet-adapter-react";
 import { BONK_LIMIT } from "../utils/BonkAdmin";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import MeetBonk from "../Components/MeetBonk";
+import DogImages from "../Components/DogImages";
+import BonkTitle from "../Components/BonkTitle";
+import AboutBonk from "../Components/AboutBonk";
+
 
 const Home = () => {
   const { publicKey, sendTransaction } = useWallet("");
@@ -53,12 +58,17 @@ const Home = () => {
 
   return (
     <div className="home">
+     <BonkTitle/>
+     <AboutBonk/>
+      <DogImages/>
       <BonkInput {...{ bonkAmount, setBonkAmount }} />
-      <div>
+      <div className="bonkBox">
+        <img src={require('../assests/Images/baseball-bat.png')} alt='baseball-bat' className="batImage"/>
         <BonkButton onClick={burnBonkTokens} isDisabled={isDisabled}>
           BONK
         </BonkButton>
       </div>
+      <MeetBonk/>
       <ToastContainer />
     </div>
   );
