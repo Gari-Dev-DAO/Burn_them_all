@@ -2,7 +2,7 @@
 
 const AboutBonk = () => {
   return (
-    <div style={{ display: "flex",flexWrap:'wrap' ,marginBottom:'20px',width:'80%'}}>
+    <div className="aboutBonk">
       <button className="nftbtn">LeaderBoard</button>
       <p style={{ color: "#14D9E5", width: "55%" }}>
         It is the first meme crypto on Solana blockchain and has been
