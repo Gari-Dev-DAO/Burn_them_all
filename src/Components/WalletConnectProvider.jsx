@@ -14,24 +14,17 @@ import {
   TorusWalletAdapter,
 } from "@solana/wallet-adapter-wallets";
 import { clusterApiUrl } from "@solana/web3.js";
-import { useMemo} from "react";
+import { useMemo } from "react";
 
 export const WalletConnectProvider = ({ children }) => {
-  const network = WalletAdapterNetwork.Mainnet;
+  const network = WalletAdapterNetwork.Devnet;
   const endpoint = useMemo(() => {
     return clusterApiUrl(network);
   }, [network]);
 
   const wallets = useMemo(
     () => [
-      new PhantomWalletAdapter(),
-      new GlowWalletAdapter(),
-      new SlopeWalletAdapter(),
-      new SolflareWalletAdapter(),
-      new SolletExtensionWalletAdapter(),
-      new SlopeWalletAdapter(),
-      new TorusWalletAdapter(),
-      new SolletWalletAdapter(),
+      new PhantomWalletAdapter()
     ],
     [network]
   );

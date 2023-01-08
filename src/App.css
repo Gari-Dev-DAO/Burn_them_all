@@ -1,38 +1,93 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navBar{
   display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 6rem;
+  background:   rgba(25, 29, 41,0.95);
+}
+
+.navLinkBox{
+  display: flex;
+  flex-direction: 'row';
+  align-items: center;
+  color:#FED900
+}
+.navLinkBox p{
+  margin: 30px;
+}
+.home{
+  min-height: calc(100vh - 6rem);
+  background:   rgba(25, 29, 41,0.95);
+  display: flex;
+  align-items: center;
   flex-direction: column;
+}
+.bonkBtn{
+  background: radial-gradient(90.16% 143.01% at 15.32% 21.04%, rgba(165, 239, 255, 0.2) 0%, rgba(110, 191, 244, 0.0447917) 77.08%, rgba(70, 144, 213, 0) 100%);
+  color:#FFFFFF;
+  font-size: 30px;
+  font-weight: 600;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 0.5px solid #FED900;
+}
+.bonkBtn[disabled]{
+ cursor: not-allowed;
+ opacity: 0.4;
+}
+
+
+.bonkAmount{
+  font-weight: 800;
+  font-size: 32px;
+  color:#FEC200;
+ 
+}
+.bonkLimit{
+   font-size: 20px;
+   color: #FEC200;
+   font-weight: 800;
+}
+.bonkInput{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 26px;
+}
+.input{
+  height: 2.5rem;
+  width: 3rem;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: radial-gradient(90.16% 143.01% at 15.32% 21.04%, rgba(165, 239, 255, 0.2) 0%, rgba(110, 191, 244, 0.0447917) 77.08%, rgba(70, 144, 213, 0) 100%);
+  color: #FFFFFF;
+  border: 0.5px solid #FED900;
 }
 
-.App-link {
-  color: #61dafb;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }

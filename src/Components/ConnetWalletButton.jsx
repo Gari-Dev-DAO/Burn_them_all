@@ -1,9 +1,9 @@
-import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
+import { WalletMultiButton,WalletConnectButton } from "@solana/wallet-adapter-react-ui"
 
 const ConnetWalletButton = () => {
   return (
-    <div className="connectWalletBtn">
-        <WalletMultiButton/>
+    <div >
+       <WalletMultiButton/>
     </div>
   )
 }
