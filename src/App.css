@@ -82,7 +82,7 @@
 
 .input {
   height: 2.5rem;
-  width: 3rem;
+  width: 4rem;
   font-size: 1.5rem;
   border-radius: 5px;
   padding: 5px 10px;
@@ -138,11 +138,15 @@ input[type="number"] {
 
 .dogImgContainer {
   display: flex;
+  width: 70%;
 }
 
 .dogImgs {
-  width: 600px;
-  height: 200px;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: auto;
+  max-height: auto;
+  object-fit: contain;
 }
 
 .nftbtn {
@@ -151,30 +155,34 @@ input[type="number"] {
   border: 1px solid #14d9e5;
   margin: auto;
   background-color: "transparent";
-  border-radius: 10px;
+  border-radius: 15px;
   background: rgba(25, 29, 41, 0.7);
   text-transform: uppercase;
   display: flex;
   margin: auto 30px;
-  margin-bottom: 10px;
 }
 
 .bonkTitleContainer {
   display: flex;
   width: 100%;
+  background-image: url("./assests/Images/GETSETBONK.png");
   align-items: center;
   justify-content: center;
-  height: 140px;
+  background-size: 50% 65%;
+  background-repeat: no-repeat;
+  background-position: 55% 12% ;
 }
 .title {
   width: 60%;
-  background-image: url("./assests/Images/GETSETBONK.png");
-  background-position: top;
-  background-size: contain;
+  background: url('./assests/Images/Sale.png');
   background-repeat: no-repeat;
-  height: 100px;
-  padding-top: 10px;
+  background-size: 180px 95px;
+  padding-top: 30px;
+  background-position: 104% 111%;
+  padding-right: 40px;
+  padding-bottom: 10px;
 }
+
 
 .link {
   text-decoration: none;
@@ -189,10 +197,10 @@ input[type="number"] {
   margin: 30px;
 }
 .title p {
-  font-size: 42px;
-  font-weight: bold;
+  font-size: 3.5rem;
+  font-weight: 1000;
   text-align: right;
-  line-height: 38px;
+  line-height: 3.3rem;
 }
 .burnText {
   color: #ffffff;
@@ -205,7 +213,7 @@ input[type="number"] {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 20px;
-  width: 80%;
+  width: 85%;
   justify-content: center;
 }
 .loading {
@@ -214,15 +222,44 @@ input[type="number"] {
 .infoText {
   color: #14d9e5;
   width: 55%;
+  margin-top: 0.8rem;
+}
+.walletBtn{
+  background: radial-gradient(
+    90.16% 143.01% at 15.32% 21.04%,
+    rgba(165, 239, 255, 0.2) 0%,
+    rgba(110, 191, 244, 0.0447917) 77.08%,
+    rgba(70, 144, 213, 0) 100%
+  ) !important;
+  height: 2rem !important;
+  padding: 15px !important;
+  border: 1px solid #fed900;
+  border-radius: 20px;
+}
+
+@media screen and (max-width:1050px){
+ .title p{
+  font-size: 2.7rem;
+  line-height: 2.7rem;
+ }
+ .title{
+  padding-top: 20px;
+ }
+ .bonkTitleContainer{
+  background-size: 45% 55%;
+ }
 }
 
 @media only screen and (max-width: 800px) {
+  .dogImgContainer{
+    width: 90%;
+  }
   .title {
     width: 100%;
   }
   .title p {
-    font-size: 24px;
-    line-height: 28px;
+    font-size: 2rem;
+    line-height: 2.2rem;
   }
   .aboutBonk {
     width: 100%;
@@ -251,18 +288,30 @@ input[type="number"] {
   .infoText {
     width: 80%;
   }
+  .title{
+    padding-top: 10px;
+    background-size: 150px 80px;
+    background-position: 99% 70%;
+    padding-bottom: 30px;
+  }
+  .bonkTitleContainer{
+    background-size: 50% 40%;
+    background-position: 50% 20%;
+  }
 }
 @media only screen and (max-width: 550px) {
-  .dogImgs {
-    width: "100%";
-    height: 140px;
-    object-fit: contain;
+  .dogImgContainer{
+    width: 100%;
   }
   .meetBonk {
     display: none;
   }
+  .title{
+    padding-top: 10px;
+  }
   .title p {
     font-size: 1.2rem;
+    line-height: 1.3rem;
   }
   .burnText {
     margin-right: 1rem;
@@ -270,6 +319,7 @@ input[type="number"] {
   .bonkLogo {
     height: 70px;
     width: 70px;
+    margin: 20px;
   }
   .infoText {
     width: 100%;
@@ -296,5 +346,17 @@ input[type="number"] {
   }
   .home{
     margin-top: 6rem;
+  }
+  .walletBtn{
+    margin: 10px 0px;
+  }
+  .title{
+    padding-top: 10px;
+    background: none;
+    padding-right: 0;
+  }
+  .bonkTitleContainer{
+    background-size: 55% 40%;
+    background-position: 40% 20%;
   }
 }

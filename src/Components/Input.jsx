@@ -28,7 +28,6 @@ const Input = () => {
         onClick={() => {
           updateBonkAmount(bonkAmount+1)
         }}
-        style={{ background: "none", color: "blue" }}
       >
         <AiOutlineUp color="#FED900" size="25px" />
       </Button>

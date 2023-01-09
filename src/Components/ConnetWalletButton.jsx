@@ -3,7 +3,7 @@ import { WalletMultiButton,WalletConnectButton } from "@solana/wallet-adapter-re
 const ConnetWalletButton = () => {
   return (
     <div >
-       <WalletMultiButton/>
+       <WalletMultiButton className="walletBtn"/>
     </div>
   )
 }
