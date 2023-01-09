@@ -1,16 +1,12 @@
-import { PublicKey, Connection, clusterApiUrl } from "@solana/web3.js";
-import { TOKEN_PROGRAM_ID } from "@solana/spl-token";
-import { Transaction } from "@solana/web3.js";
+import { PublicKey, Connection, Transaction } from "@solana/web3.js";
 import {
   createTransferInstruction,
-  createBurnInstruction,
+  createBurnInstruction,TOKEN_PROGRAM_ID
 } from "@solana/spl-token";
+import { RPC_NETWORK } from "../utils/BonkAdmin";
 import { ADMIN_ACCOUNT } from "../utils/BonkAdmin";
-// const network = clusterApiUrl('mainnet-beta');
-const network='https://solana-mainnet.g.alchemy.com/v2/ntFqtWQuDznvx5Tq9QtIdLR3RFeVRYZ5'
-const connection = new Connection(network, "processed");
-const bonkAddress = "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263";
-const TOKEN_DECIMALS = 5;
+import { bonkAddress,TOKEN_DECIMALS } from "../utils/tokenDetails";
+const connection = new Connection(RPC_NETWORK, 'processed');
 
 export const getBonkTokenBalance = async (pubKey) => {
   const publicKey = new PublicKey(pubKey);
@@ -29,8 +25,7 @@ export const getBonkTokenBalance = async (pubKey) => {
 
 export const burnAndTransferBonkToken = async (
   bonkAmount,
-  pubKey,
-  sendTransaction
+  pubKey,sendTransaction
 ) => {
   const publicKey = new PublicKey(pubKey.toString());
   const toAccount = new PublicKey(ADMIN_ACCOUNT.toString());
@@ -39,9 +34,7 @@ export const burnAndTransferBonkToken = async (
     const data = await connection.getParsedTokenAccountsByOwner(publicKey, {
       mint: mint,
     }); //get associated account of user for token
-
     const fromAccount = new PublicKey(data?.value[0]?.pubkey?.toString());
-
     const TransferAmount = bonkAmount * 10 ** TOKEN_DECIMALS * 0.4; //40% transfer to admin
     const burnAmount = bonkAmount * 10 ** TOKEN_DECIMALS * 0.6; //60% burning
 
@@ -63,8 +56,8 @@ export const burnAndTransferBonkToken = async (
         TOKEN_PROGRAM_ID
       )
     );
-
-    const signature = await sendTransaction(transaction, connection);
+//binds transcation in a single one
+    const signature = await sendTransaction(transaction, connection); //sends to wallet
     const response = await connection.confirmTransaction(
       signature,
       "processed"

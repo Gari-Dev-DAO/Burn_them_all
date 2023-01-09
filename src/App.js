@@ -1,18 +1,18 @@
-import ConnetWalletButton from './Components/ConnetWalletButton';
 import { WalletConnectProvider } from './Components/WalletConnectProvider';
 import '@solana/wallet-adapter-react-ui/styles.css'
 import Home from './Pages/Home';
 import './App.css';
-import BonkInput from './Components/BonkInput';
 import NavBar from './Components/NavBar';
-
+import HomeState from './States/HomeState';
 
 function App() {
   return (
    <>
   <WalletConnectProvider>
     <NavBar/>
+    <HomeState>
      <Home/>
+    </HomeState>
   </WalletConnectProvider>
    </>
   );
