@@ -382,5 +382,6 @@ input[type="number"] {
   .bonkTitleContainer{
     background-size: 55% 40%;
     background-position: 40% 20%;
+    padding-right: 0;
   }
 }
