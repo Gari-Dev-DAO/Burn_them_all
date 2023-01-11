@@ -7,9 +7,7 @@
   display: none;
   z-index: 100;
   padding: 0.7rem 1rem;
-  
 }
-
 
 .navBar {
   background: rgba(25, 29, 41, 0.95);
@@ -29,7 +27,6 @@
   min-height: 4rem;
 }
 
-
 .navLinkBox {
   display: flex;
   flex-direction: "row";
@@ -39,6 +36,7 @@
 .navLinkBox a {
   display: flex;
   margin: 10px;
+  cursor: pointer;
 }
 .navlinks a{
  margin: 0px 2rem;
@@ -47,8 +45,6 @@
 .home {
   /* background: radial-gradient(35.56% 83.6% at 50% 50%, rgba(217, 217, 217, 0) 0%, rgba(25, 29, 41, 0.9) 100%),rgba(0, 0, 0, 0); */
   background: rgba(25, 29, 41, 0.95);
-  background-repeat: no-repeat;
-  background-size: cover;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -89,6 +85,7 @@
   border: 0.5px solid #fed900;
   margin: auto;
 }
+
 .bonkBtn[disabled] {
   cursor: not-allowed;
   opacity: 0.4;
@@ -207,18 +204,11 @@ input[type="number"] {
   background-size: 55% 57%;
   background-repeat: no-repeat;
   background-position: 65% 12% ;
- 
 }
 .title {
   width: 90%;
-  /* background: url('./assests/Images/Sale.png');
-  background-repeat: no-repeat;
-  background-size: unset; */
   padding-top: 30px;
-  background-position: 88% 207%;
-  /* padding-right: 30px; */
   padding-bottom: 25px;
-  z-index: 500;
 }
 
 
@@ -237,9 +227,10 @@ input[type="number"] {
 .title p {
   font-size: 3.5rem;
   font-weight: 1000;
-  text-align: right;
+  display: flex;
+  justify-content: end;
   line-height: 3.3rem;
- 
+  text-align: right;
 }
 .burnText {
   color: #ffffff;
@@ -248,7 +239,7 @@ input[type="number"] {
 }
 .emText {
   color: #fdb000;
- text-shadow: 0px 0px 40px rgba(255, 219, 17, 0.9);
+  text-shadow: 0px 0px 40px rgba(255, 219, 17, 0.9);
 }
 .aboutBonk {
   display: flex;
@@ -260,11 +251,13 @@ input[type="number"] {
 .loading {
   margin-top: 10%;
 }
+
 .infoText {
   color: #14d9e5;
   width: 55%;
   margin-top: 0.8rem;
 }
+
 .walletBtn{
   background: radial-gradient(
     90.16% 143.01% at 15.32% 21.04%,
@@ -288,6 +281,7 @@ input[type="number"] {
  }
  .bonkTitleContainer{
   background-size: 45% 55%;
+  width: 100%;
  }
 }
 
@@ -295,6 +289,7 @@ input[type="number"] {
   .dogImgContainer{
     width: 90%;
   }
+  
   .title {
     width: 100%;
   }
@@ -331,6 +326,7 @@ input[type="number"] {
   }
   .title{
     padding-top: 10px;
+    width: 90%;
     background-size: 150px 80px;
     background-position: 99% 70%;
     padding-bottom: 30px;
@@ -342,6 +338,18 @@ input[type="number"] {
   }
 }
 @media only screen and (max-width: 550px) {
+  .toggleBar{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    }
+    .nav , .navLinkBox{
+      flex-direction: column;
+    }
+    .navLinkBox a{
+      margin: 6px;
+    }
+
   .dogImgContainer{
     width: 100%;
   }
@@ -378,21 +386,7 @@ input[type="number"] {
     left: 90px;
     top: -80px;
   }
-  .toggleBar{
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  }
   
-  .nav{
-    flex-direction: column;
-  }
-  .navLinkBox{
-    flex-direction: column;
-  }
-  .navLinkBox a{
-    margin: 6px;
-  }
   .home{
     margin-top: 3.5rem;
   }
@@ -412,5 +406,8 @@ input[type="number"] {
   }
   .hide{
     display: none;
+  }
+  .loading {
+    margin-top: 50%;
   }
 }
