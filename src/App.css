@@ -3,18 +3,32 @@
   margin: 0;
   padding: 0;
 }
+.toggleBar{
+  display: none;
+  z-index: 100;
+  padding: 0.7rem 1rem;
+  
+}
+
 
 .navBar {
+  background: rgba(25, 29, 41, 0.95);
+  top: 0;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nav{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 4rem;
-  background: rgba(25, 29, 41, 0.95);
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-  width: 100%;
+  min-height: 4rem;
 }
+
 
 .navLinkBox {
   display: flex;
@@ -25,6 +39,9 @@
 .navLinkBox a {
   display: flex;
   margin: 10px;
+}
+.navlinks a{
+ margin: 0px 2rem;
 }
 
 .home {
@@ -183,23 +200,23 @@ input[type="number"] {
 
 .bonkTitleContainer {
   display: flex;
-  width: 100%;
+  width: 80%;
   background-image: url("./assests/Images/GETSETBONK.png");
   align-items: center;
   justify-content: center;
-  background-size: 50% 65%;
+  background-size: 55% 57%;
   background-repeat: no-repeat;
-  background-position: 55% 12% ;
-  padding-right: 100px;
+  background-position: 65% 12% ;
+ 
 }
 .title {
   width: 90%;
-  background: url('./assests/Images/Sale.png');
+  /* background: url('./assests/Images/Sale.png');
   background-repeat: no-repeat;
-  background-size: unset;
+  background-size: unset; */
   padding-top: 30px;
   background-position: 88% 207%;
-  padding-right: 30px;
+  /* padding-right: 30px; */
   padding-bottom: 25px;
   z-index: 500;
 }
@@ -319,6 +336,7 @@ input[type="number"] {
     padding-bottom: 30px;
   }
   .bonkTitleContainer{
+    width: 100%;
     background-size: 50% 40%;
     background-position: 50% 20%;
   }
@@ -360,16 +378,23 @@ input[type="number"] {
     left: 90px;
     top: -80px;
   }
-  .navBar{
+  .toggleBar{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  }
+  
+  .nav{
     flex-direction: column;
-    height: 6rem;
-    padding-top: 10px;
+  }
+  .navLinkBox{
+    flex-direction: column;
   }
   .navLinkBox a{
     margin: 6px;
   }
   .home{
-    margin-top: 6rem;
+    margin-top: 3.5rem;
   }
   .walletBtn{
     margin: 10px 0px;
@@ -380,8 +405,12 @@ input[type="number"] {
     padding-right: 0;
   }
   .bonkTitleContainer{
+    width: 100%;
     background-size: 55% 40%;
     background-position: 40% 20%;
     padding-right: 0;
+  }
+  .hide{
+    display: none;
   }
 }
