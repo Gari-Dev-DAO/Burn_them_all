@@ -24,7 +24,13 @@ export const WalletConnectProvider = ({ children }) => {
 
   const wallets = useMemo(
     () => [
-      new PhantomWalletAdapter()
+      new PhantomWalletAdapter(),
+      new SolletWalletAdapter(),
+      new TorusWalletAdapter(),
+      new SlopeWalletAdapter(),
+      new GlowWalletAdapter(),
+      new SolflareWalletAdapter(),
+      new SolletExtensionWalletAdapter()
     ],
     [network]
   );
