@@ -36,6 +36,7 @@ const Input = () => {
         value={bonkAmount}
         onChange={handleInputChange}
         className="input"
+        aria-label="bonk-input"
       />
       <Button
         onClick={() => {

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AboutBonk renders component 1`] = `
+<div>
+  <div
+    class="aboutBonk"
+  >
+    <button
+      class="nftbtn"
+    >
+      LeaderBoard
+    </button>
+    <p
+      class="infoText"
+    >
+      It is the first meme crypto on Solana blockchain and has been responsible for boosting the price of SOL token in the past weeks
+    </p>
+  </div>
+</div>
+`;

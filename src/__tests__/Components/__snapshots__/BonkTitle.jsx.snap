@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Bonk Title renders component 1`] = `
+<div>
+  <div
+    class="bonkTitleContainer"
+  >
+    <div
+      class="title"
+    >
+      <p
+        class="emText"
+      >
+        BONK EM ALL
+      </p>
+      <p
+        class="burnText"
+      >
+        BURN THE BONK$
+      </p>
+    </div>
+    <div>
+      <img
+        alt="BonkLogo"
+        class="bonkLogo"
+        src="BonkLogo.png"
+      />
+    </div>
+  </div>
+</div>
+`;

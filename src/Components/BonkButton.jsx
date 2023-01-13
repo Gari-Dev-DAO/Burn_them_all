@@ -6,3 +6,6 @@ const BonkButton = ({children,onClick,isDisabled}) => {
 }
 
 export default BonkButton
+//render
+//onclick should called
+// if isDisabled than button should be disable else not

@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar renders component 1`] = `
+<div>
+  <div
+    class="navBar"
+  >
+    <div
+      class="toggleBar"
+    >
+      <button
+        data-testid="button"
+        style="background-color: transparent; cursor: pointer; z-index: 200;"
+      >
+        <svg
+          color="white"
+          fill="currentColor"
+          height="32"
+          stroke="currentColor"
+          stroke-width="0"
+          style="color: white;"
+          version="1.1"
+          viewBox="0 0 17 17"
+          width="32"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g />
+          <path
+            d="M17 2v1h-17v-1h17zM0 7h17v-1h-17v1zM0 11h17v-1h-17v1zM0 15h17v-1h-17v1z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="nav "
+      data-testid="nav"
+    >
+      <div
+        class="navLinkBox"
+      >
+        <a
+          class="link"
+        >
+          Go bonk Errs
+        </a>
+      </div>
+      <div
+        class="navLinkBox navlinks"
+      >
+        <a
+          class="link"
+          href="https://www.coingecko.com/en/coins/bonk"
+          target="_blank"
+        >
+          Buy Bonk
+        </a>
+        <a
+          class="link"
+          href="https://web.telegram.org/k/#-813184380"
+          target="_blank"
+        >
+          Telegram
+        </a>
+      </div>
+      <div
+        class="navLinkBox"
+      >
+        <div>
+          <button
+            class="wallet-adapter-button walletBtn"
+            tabindex="0"
+            type="button"
+          >
+            Select Wallet
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

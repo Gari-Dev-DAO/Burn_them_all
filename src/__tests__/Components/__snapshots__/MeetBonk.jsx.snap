@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Bonk Title renders component 1`] = `
+<div>
+  <div
+    class="meetBonk"
+  >
+    <img
+      alt="meet-bonk"
+      class="meetBonkImage"
+      src="meet-bonk.png"
+    />
+  </div>
+</div>
+`;

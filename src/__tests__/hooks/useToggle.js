@@ -1,0 +1,9 @@
+import { renderHook,act } from "@testing-library/react";
+import { useToggle } from "../../hooks/useToggle";
+
+describe('useToggle',()=>{
+    it('should set intial state to false',()=>{
+        const {result}=renderHook(()=>useToggle())
+        expect(result.current.isToggle).toBeFalsy()
+    })
+})

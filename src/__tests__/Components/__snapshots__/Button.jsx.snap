@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders component 1`] = `
+<div>
+  <button
+    data-testid="button"
+    style="background-color: transparent; cursor: pointer; z-index: 200;"
+  />
+</div>
+`;

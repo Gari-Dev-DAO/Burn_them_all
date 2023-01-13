@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Connect Wallet Button renders component 1`] = `
+<div>
+  <div>
+    <button
+      class="wallet-adapter-button walletBtn"
+      tabindex="0"
+      type="button"
+    >
+      Select Wallet
+    </button>
+  </div>
+</div>
+`;

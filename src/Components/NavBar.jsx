@@ -2,14 +2,15 @@ import { BsXLg } from "react-icons/bs";
 import { TfiAlignJustify } from "react-icons/tfi";
 import ConnetWalletButton from "./ConnetWalletButton"
 import Button from "./Button";
-import { useState } from "react";
+import { useToggle } from "../hooks/useToggle";
+
 
 const NavBar = () => {
-  const [isToggle,setIsToggle]=useState(false)
+  const [isToggle,makeToggle]=useToggle()
   return (
     <div className='navBar'>
-       <div className="toggleBar"><Button onClick={()=>setIsToggle(!isToggle)}>{isToggle?<TfiAlignJustify size='32' color='white'/>:<BsXLg size={32} color='white'/>}</Button></div>
-       <div  className={`nav ${!isToggle ? "hide" : ""}`}>
+       <div className="toggleBar"><Button onClick={makeToggle}>{!isToggle?<TfiAlignJustify size='32' color='white'/>:<BsXLg size={32} color='white'/>}</Button></div>
+       <div  className={`nav ${isToggle ? "hide" : ""}`} data-testid="nav">
         <div className="navLinkBox">
          <a className="link">Go bonk Errs</a>
         </div>
