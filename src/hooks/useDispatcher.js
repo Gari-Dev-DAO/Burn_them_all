@@ -16,12 +16,15 @@ export const useDispatcher = () => {
         dispatch({type:'update userBalance',value:value})
     }
 
-   
+    const updateSelectedToken=(value)=>{
+        dispatch({type:'update selectedToken',value:value})
+    }
 
     const values={
         updateBonkAmount:updateBonkAmount,
         updateLoading:updateLoading,
         updateUserBalance:updateUserBalance,
+        updateSelectedToken:updateSelectedToken
     }
     return values
 }

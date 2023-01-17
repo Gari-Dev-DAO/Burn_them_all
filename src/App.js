@@ -4,15 +4,19 @@ import Home from './Pages/Home';
 import './App.css';
 import NavBar from './Components/NavBar';
 import HomeState from './States/HomeState';
+import PayMe from './Components/PayMe';
+
 
 function App() {
   return (
    <>
   <WalletConnectProvider>
-    <NavBar/>
-    <HomeState>
+    <NavBar/> 
+     <HomeState>
      <Home/>
     </HomeState>
+     {/* <PayMe/> */}
+    
   </WalletConnectProvider>
    </>
   );

@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@jup-ag/core": "^1.0.0-beta.33",
+    "@jup-ag/react-hook": "^1.0.0-beta.33",
     "@solana/spl-token": "^0.3.6",
     "@solana/wallet-adapter-base": "^0.9.20",
     "@solana/wallet-adapter-react": "^0.15.28",
@@ -13,6 +15,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "install": "^0.13.0",
+    "jsbi": "^4.3.0",
     "node-polyfill-webpack-plugin": "^2.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -30,7 +33,6 @@
     "eject": "react-scripts eject",
     "coverage": "npm test --coverage --watchAll "
   },
-  
   "eslintConfig": {
     "extends": [
       "react-app",

@@ -285,8 +285,48 @@ input[type="number"] {
   border: 1px solid #fed900;
   border-radius: 20px;
 }
-
-
+.select{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.select-input-box{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 5px 10px;
+  width: 5rem;
+  height: 2.5rem;
+  background: radial-gradient(
+    90.16% 143.01% at 15.32% 21.04%,
+    rgba(165, 239, 255, 0.2) 0%,
+    rgba(110, 191, 244, 0.0447917) 77.08%,
+    rgba(70, 144, 213, 0) 100%
+  );
+  color: #ffffff;
+  border: 0.5px solid #fed900;
+  border-radius: 5px;
+}
+.select-options{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1.5rem;
+  position: absolute;
+  top:3rem;
+  background-color: #fec200;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+.options-hide{
+  display: none;
+}
+.option{
+   display: flex;
+   align-items: center;
+   gap: 0.8rem;
+  
+}
 
 
 @media screen and (max-width:1050px){

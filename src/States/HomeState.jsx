@@ -25,12 +25,15 @@ const reducer=(state,action)=>{
       return  {...state,publicKey:value}
       else if (type=='update sendTransaction')
       return {...state,sendTransaction:value}
+      else if (type=='update selectedToken')
+      return {...state,selectedToken:value}
     else
     return state;
   }
   
 
 const initialState={
+   selectedToken:0,
    userBalance:0,
    bonkAmount:1,
    loading:false,

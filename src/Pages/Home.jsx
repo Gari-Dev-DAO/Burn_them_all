@@ -12,12 +12,14 @@ import { HomeStateContext } from "../States/HomeState";
 import { useBonk } from "../hooks/useBonk";
 import { useWallet } from "@solana/wallet-adapter-react";
 
+
 const Home = () => {
 const {publicKey}=useWallet()
 console.log(publicKey)
 const {burnBonkTokens,isDisabled}=useBonk()
 const [homeState]=useContext(HomeStateContext)
 const {loading}=homeState
+   
 
   return (
     <div className="home">
@@ -36,7 +38,7 @@ const {loading}=homeState
               className="batImage"
             />
             <BonkButton onClick={burnBonkTokens} isDisabled={isDisabled}>
-              BONK
+              BURN
             </BonkButton>
           </div>
           <MeetBonk />
