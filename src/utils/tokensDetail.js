@@ -5,6 +5,12 @@ export const TOKEN = [
     MintAddress: "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
     Decimals: "5",
   },
+ {
+    Name: "COPE",
+    Icon: "https://shdw-drive.genesysgo.net/HNTiV9QS4UDrcxpucyKRGTKQTqKGLif61GwM6tpd5R5V/image.png",
+    MintAddress: "o1Mw5Y3n68o8TakZFuGKLZMGjm72qv4JeoZvGiCLEvK",
+    Decimals: "2",
+  },
   {
     Name: "GARI",
     Icon: "https://gari.network/wp-content/themes/gari/assets/img/gari-icon-new.png",

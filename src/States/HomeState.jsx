@@ -46,7 +46,9 @@ const [homeState,dispatch]=useReducer(reducer,initialState);
 
   return (
    <Provider value={[homeState,dispatch]}>
+    <div className="container">
    {children}
+   </div>
    </Provider>
   )
 }

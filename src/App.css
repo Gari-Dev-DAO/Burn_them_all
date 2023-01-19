@@ -59,11 +59,7 @@
   text-shadow: 0px 0px 10px #f7bf08;
 }
 
-
-
-
-.home {
-  /* background: radial-gradient(35.56% 83.6% at 50% 50%, rgba(217, 217, 217, 0) 0%, rgba(25, 29, 41, 0.9) 100%),rgba(0, 0, 0, 0); */
+.container{
   background: rgba(25, 29, 41, 0.95);
   display: flex;
   align-items: center;
@@ -75,7 +71,15 @@
   min-height: calc(100vh - 4rem);
 }
 
-.home:before {
+
+.home {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.container:before {
   content: ' ';
   display: block;
   position: absolute;
@@ -327,6 +331,70 @@ input[type="number"] {
    gap: 0.8rem;
   
 }
+.burn-nft{
+  margin-top: 4rem;
+ 
+}
+
+
+.nfts-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:2rem;
+  align-items: baseline;
+  justify-content: center;
+}
+.nft-container
+{
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(
+    90.16% 143.01% at 15.32% 21.04%,
+    rgba(165, 239, 255, 0.2) 0%,
+    rgba(110, 191, 244, 0.0447917) 77.08%,
+    rgba(70, 144, 213, 0) 100%
+  );
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 2px 5px 10px #fec200;
+  color: white;
+}
+
+.nft-img{
+  object-fit: cover;
+  width:220px;
+  height:300px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.discription{
+    padding: 10px;
+}
+
+.nft-burn-btn{
+   position: absolute;
+   top: 5px;
+   right: 5px;
+   background-color: rgb(85, 140, 3);
+   padding: 5px;
+   border-radius: 5px;
+   color: white;
+}
+.dialect{
+  z-index: 10000000;
+}
+.light{
+  z-index: 200;
+}
+
+
+
+
+
+
+
 
 
 @media screen and (max-width:1050px){

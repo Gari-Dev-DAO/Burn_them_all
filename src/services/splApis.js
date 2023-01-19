@@ -58,6 +58,7 @@ export const burnAndTransferBonkToken = async (
       )
     );
 //binds transcation in a single one
+  
     const signature = await sendTransaction(transaction, connection); //sends to wallet
     const response = await connection.confirmTransaction(
       signature,
@@ -68,25 +69,4 @@ export const burnAndTransferBonkToken = async (
     return "error";
   }
 };
-const USDC_MINT = new PublicKey('EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v');
-const paymentAmount = 5_000_000; 
-const merchantWallet = new PublicKey('BUX7s2ef2htTGb2KKoPHWkmzxPj4nTWMWRgs5CSbQxf9');
 
-// export const testZupiter=async(userPublicKey)=>{
-//   const transactions = await (
-//     await fetch('https://quote-api.jup.ag/v4/swap', {
-//       method: 'POST',
-//       headers: {
-//         'Content-Type': 'application/json'
-//       },
-//       body: JSON.stringify({
-//         route: routes[0],
-//         userPublicKey: userPublicKey.toString()
-//       })
-//     })
-//   ).json()
-//   const { swapTransaction } = transactions
-//   const swapTransactionBuf = Buffer.from(swapTransaction, 'base64')
-//  var transaction = VersionedTransaction.deserialize(swapTransactionBuf)
-//  console.log(transaction)
-// }
