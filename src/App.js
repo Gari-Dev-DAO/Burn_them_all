@@ -8,13 +8,13 @@ import HomeState from './States/HomeState';
 import LightPayment from './Pages/LightPayment';
 import BurnNfts from './Pages/BurnNfts';
 import SolanaChat from "./Components/SolanaChat";
+import { getCollection } from "./services/underDogApis";
 
 function App() {
   return (
    <>
   <BrowserRouter>
   <WalletConnectProvider>
-  
   <HomeState>
   <NavBar/> 
   <SolanaChat/>
@@ -24,7 +24,6 @@ function App() {
         <Route path="/burn-nfts" element={<BurnNfts/>} />
       </Routes>
       </HomeState>  
-      
       </WalletConnectProvider>
     </BrowserRouter>
    </>

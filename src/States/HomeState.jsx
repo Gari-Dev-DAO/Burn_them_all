@@ -39,7 +39,8 @@ const initialState={
    loading:false,
    publicKey:publicKey,
    connection:connection,
-   sendTransaction:sendTransaction
+   sendTransaction:sendTransaction,
+   
 }
 
 const [homeState,dispatch]=useReducer(reducer,initialState);

@@ -9,7 +9,7 @@ import {
 } from '@dialectlabs/react-sdk-blockchain-solana';
 import { useWallet } from '@solana/wallet-adapter-react';
 import { useState, useMemo, useEffect } from 'react';
-import { BottomChat ,Inbox,Notification } from '@dialectlabs/react-ui';
+import { Inbox } from '@dialectlabs/react-ui';
 import { useToggle } from '../hooks/useToggle';
 import { BsFillChatTextFill} from "react-icons/bs";
 

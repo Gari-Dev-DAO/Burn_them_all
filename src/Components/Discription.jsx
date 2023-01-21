@@ -8,7 +8,7 @@ const Discription = ({name,description=''}) => {
     <div className='discription'>
     <h5>{name}</h5>
      <p style={{fontSize:'0.7rem'}}>{isToggle?`${description?.substr(0, 20)}...`:description}</p>
-     <Button onClick={makeToggle}><p>{isToggle?'read more':'read less'}</p></Button>
+     <Button onClick={makeToggle}><p style={{color:'yellow'}}>{isToggle?'read more':'read less'}</p></Button>
     </div>
   )
 

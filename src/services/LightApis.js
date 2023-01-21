@@ -1,25 +1,18 @@
 
-
-// Trigger popup widget
 export const Transfer = (recipient,amount)=>{
 
 window.open(
     `https://dev.widget.lightprotocol.com?token=${'SOL'}&recipient=${recipient}&amount=${amount}`,
-    '_blank', // https://dev.widget.lightprotocol.com for devnet
+    '_blank', 
     `left=0,top=0,width=500,height=700`,
 ); 
 
 }
-//used to get window popup for transfer
 
-// Define amount in lamports
-
-
-// Trigger popup widget
 export const createSheild = (amount)=>{window.open(
   
     ` https://widget.lightprotocol.com?a=shield&token=${'SOL'}&amount=${amount}`,
-    '_blank', // https://dev.widget.lightprotocol.com for devnet
+    '_blank', 
     `left=0,top=0,width=500,height=700`,
 ); }
 
@@ -43,8 +36,8 @@ export const getBalanceinWeb=async()=>{
           // https://dev.widget.lightprotocol.com for devnet
             if (event.data.amount) {
               console.log('Balance: ', event.data.amount); // lamports as String
-              privateBalance = Number(event.data.amount); //
-               return privateBalance;
+              privateBalance = Number(event.data.amount); 
+              alert(privateBalance)//
             } else {
               console.log('Ignoring external event.');
             }
@@ -59,6 +52,8 @@ export const getBalanceinWeb=async()=>{
           }
         }, 1000);
       });
+      
+      return privateBalance
 }
 
 // export const getStatusinWeb=async()=>{

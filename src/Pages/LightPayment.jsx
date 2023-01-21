@@ -5,6 +5,7 @@ import { useWallet } from '@solana/wallet-adapter-react';
 import { useState } from 'react';
 import {  createSheild, getBalanceinWeb, Transfer } from "../services/LightApis";
 import BonkButton from "../Components/BonkButton";
+import UnderDog from '../Components/UnderDog';
 
 
 const LightPayment = () => {
@@ -37,12 +38,12 @@ const handleShield=()=>{
 const getBalance=async()=>{
   const balance=await getBalanceinWeb()
   console.log('balance in web',balance)
-  alert('balance',balance)
+  alert('balanceis',balance)
 }
 
   return (
     <div className="light" style={{padding:'2rem 0px'}}>
-
+      <UnderDog/>
       <div className="title" style={{display:'flex',flexDirection:'column',justifyContent:'center',width:'100%'}}>
         <p className="emText">
           MAKE THE PAYMENT

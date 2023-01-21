@@ -4,7 +4,7 @@ import ConnetWalletButton from "./ConnetWalletButton"
 import Button from "./Button";
 import { useToggle } from "../hooks/useToggle";
 import { NavLink } from "react-router-dom";
-
+import UDomain from "./Udomain";
 
 const NavBar = () => {
   const [isToggle,makeToggle]=useToggle()
@@ -20,7 +20,8 @@ const NavBar = () => {
          <NavLink to={'/pay-privately'} className="link">Pay Privately</NavLink>
         </div>
         <div className="navLinkBox">
-        <ConnetWalletButton/>
+        <ConnetWalletButton />
+          <UDomain />
         </div>
         </div>
     </div>

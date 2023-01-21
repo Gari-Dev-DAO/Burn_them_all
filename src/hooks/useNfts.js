@@ -28,9 +28,8 @@ export const useNfts = () => {
   };
 
   const burnNft=async(mintAddress)=>{
-    updateLoading(true)
     await burnNftByMint(wallet,mintAddress)
-    updateLoading(false)
+    
   }
 
   return {nfts,burnNft}

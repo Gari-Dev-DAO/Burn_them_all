@@ -59,6 +59,9 @@
   text-shadow: 0px 0px 10px #f7bf08;
 }
 
+
+
+
 .container{
   background: rgba(25, 29, 41, 0.95);
   display: flex;
@@ -92,6 +95,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 
 .bonkBtn {
   background: radial-gradient(
@@ -133,6 +137,8 @@
   align-items: center;
   gap: 26px;
   margin: 20px 0px;
+  justify-content: center;
+
 }
 
 .input {
@@ -172,6 +178,7 @@ input[type="number"] {
   width: 500px;
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-top: 3rem;
 }
 
@@ -209,28 +216,28 @@ input[type="number"] {
   color: #14d9e5;
   padding: 5px 16px;
   border: 1px solid #14d9e5;
-  margin: auto;
-  background-color: "transparent";
+  background: none;
   border-radius: 15px;
-  background: rgba(25, 29, 41, 0.7);
   text-transform: uppercase;
   display: flex;
   margin: auto 30px;
   cursor: pointer;
+  z-index: 200;
 }
 
 .bonkTitleContainer {
   display: flex;
-  width: 80%;
+  width: 100%;
   background-image: url("./assests/Images/GETSETBONK.png");
   align-items: center;
   justify-content: center;
-  background-size: 55% 57%;
+  background-size: 60% 50%;
   background-repeat: no-repeat;
-  background-position: 65% 12% ;
+  background-position: 40% 8% ;
+  padding-top: 1.4rem;
 }
 .title {
-  width: 90%;
+  /* width: 90%; */
   padding-top: 30px;
   padding-bottom: 25px;
 }
@@ -244,21 +251,23 @@ input[type="number"] {
   margin: 40px;
 }
 .title p {
-  font-size: 3.5rem;
-  font-weight: 1000;
+ 
+  font-weight: 800;
   display: flex;
   justify-content: end;
-  line-height: 3.3rem;
   text-align: right;
 }
 .burnText {
-  color: #ffffff;
+  font-size: 4.5rem;
+  color: #fffff3;
  margin-right: 70px;
- 
+ line-height: 4.6rem;
 }
 .emText {
   color: #fdb000;
   text-shadow: 0px 0px 40px rgba(255, 219, 17, 0.9);
+  font-size: 5rem;
+  line-height: 3rem;
 }
 .aboutBonk {
   display: flex;
@@ -266,6 +275,7 @@ input[type="number"] {
   margin-bottom: 20px;
   width: 85%;
   justify-content: center;
+  align-items: center;
 }
 .loading {
   margin-top: 10%;
@@ -273,8 +283,9 @@ input[type="number"] {
 
 .infoText {
   color: #14d9e5;
-  width: 55%;
-  margin-top: 0.8rem;
+  width: 70%;
+  margin: 10px 0px;
+  line-height: 1.1rem;
 }
 
 .walletBtn{
@@ -288,7 +299,111 @@ input[type="number"] {
   padding: 15px !important;
   border: 1px solid #fed900;
   border-radius: 20px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+  font-weight: 600;
+  cursor: pointer;
 }
+.leaderBoard{
+  width: 35%;
+  margin: auto;
+  background: linear-gradient(111.03deg, rgba(239, 238, 238, 0.32) 2.82%, rgba(239, 238, 238, 0.06) 90.94%),rgba(25, 29, 41, 0.95);;
+  backdrop-filter: blur(80px);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: fixed;
+  top:40px;
+  height: calc(100vh - 50px);
+  z-index: 50000;
+  color: #ffffff;
+  overflow:auto;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  border-radius: 16px;
+}
+.leaderBoard::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+.leaderBoard:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.07;
+  background-image: url('./assests/Images/leaderboard.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.userRank{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background:linear-gradient(111.03deg, rgba(239, 238, 238, 0.32) 2.82%, rgba(239, 238, 238, 0.06) 90.94%);
+  backdrop-filter: blur(2px);
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  padding: 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 50001;
+}
+.userContainer{
+  margin: 1rem 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  
+}
+.user{
+  width: 90%;
+    display: flex;
+  gap: 1.5rem;
+  align-items: center;
+   gap: 2rem;
+   z-index: 200;
+   justify-content: space-around;
+}
+.copyBtn{
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  text-overflow: ellipsis;
+  width: 100%;
+  overflow: hidden;
+  display:block;
+  height:100%;
+  font-weight:700;
+  letter-spacing: 0.8px;
+}
+.note{
+  font-size: 0.7rem;
+  color: rgb(42, 247, 247);
+  position: absolute;
+  bottom: 10px;
+  width: 90%;
+  font-family: 'Times New Roman', Times, serif;
+  letter-spacing: 1px;
+}
+.noteWallet{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.5rem;
+  margin: 4px 0px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
 .select{
   display: flex;
   flex-direction: column;
@@ -390,24 +505,26 @@ input[type="number"] {
 }
 
 
-
-
-
-
-
-
-
 @media screen and (max-width:1050px){
- .title p{
-  font-size: 2.7rem;
-  line-height: 2.7rem;
+ 
+ .emText{
+   font-size: 3.5rem;
+   line-height: 2.9rem;
+ }
+ .burnText{
+   font-size: 3.2rem;
+   line-height: 2.7rem;
  }
  .title{
   padding-top: 20px;
  }
  .bonkTitleContainer{
-  background-size: 45% 55%;
-  width: 100%;
+  padding-top: 0.4rem;
+ }
+ .leaderBoard{
+  width: 60%;
+  top:65px;
+  height: calc(100vh - 85px);
  }
 }
 
@@ -415,13 +532,19 @@ input[type="number"] {
   .dogImgContainer{
     width: 90%;
   }
-  
+  .bonkLogo{
+    margin: 20px;
+  }
   .title {
     width: 100%;
   }
-  .title p {
-    font-size: 2rem;
-    line-height: 2.2rem;
+  .emText{
+    font-size: 2.7rem;
+    line-height: 2.7rem;
+  }
+  .burnText{
+    font-size: 2.5rem;
+    line-height: 2.5rem;
   }
   .aboutBonk {
     width: 100%;
@@ -452,18 +575,17 @@ input[type="number"] {
   }
   .title{
     padding-top: 10px;
-    width: 90%;
-    background-size: 150px 80px;
-    background-position: 99% 70%;
     padding-bottom: 30px;
   }
   .bonkTitleContainer{
     width: 100%;
-    background-size: 50% 40%;
-    background-position: 50% 20%;
+    padding-top: 0.4rem;
   }
+  .leaderBoard{
+    width: 80%;
+   }
 }
-@media only screen and (max-width: 550px) {
+@media screen and (max-width:660px) {
   .toggleBar{
     display: flex;
     justify-content: end;
@@ -480,7 +602,7 @@ input[type="number"] {
   top: 3.5rem;
   background: rgba(25, 29, 41, 0.95);
   width: 100%;
-  height: 25vh;
+  height: 30vh;
   left: -100%;
   transition: 1s ease-in-out;
 }
@@ -488,7 +610,21 @@ input[type="number"] {
   left: 0%;
 
 }
+.container{
+  margin-top: 3.5rem;
+}
+.walletBtn{
+  margin: 8px 0px;
+}
+}
 
+
+
+
+@media only screen and (max-width: 550px) {
+.bonkAmount,.bonkLimit{
+  text-align: center;
+}
   .dogImgContainer{
     width: 100%;
   }
@@ -498,17 +634,20 @@ input[type="number"] {
   .title{
     padding-top: 10px;
   }
-  .title p {
-    font-size: 1.2rem;
-    line-height: 1.3rem;
+ 
+  .emText{
+    font-size: 1.6rem;
+    line-height: 1.5rem;
   }
-  .burnText {
+  .burnText{
+    font-size: 1.3rem;
+    line-height: 1.3rem;
     margin-right: 1rem;
   }
   .bonkLogo {
     height: 70px;
     width: 70px;
-    margin: 20px;
+    margin: 1rem;
   }
   .infoText {
     width: 100%;
@@ -526,12 +665,6 @@ input[type="number"] {
     top: -80px;
   }
   
-  .home{
-    margin-top: 3.5rem;
-  }
-  .walletBtn{
-    margin: 10px 0px;
-  }
   .title{
     padding-top: 10px;
     background: none;
@@ -539,12 +672,26 @@ input[type="number"] {
   }
   .bonkTitleContainer{
     width: 100%;
-    background-size: 55% 40%;
-    background-position: 40% 20%;
     padding-right: 0;
+    padding-left: 0;
+    padding-top: 0.2rem;
   }
   
   .loading {
     margin-top: 50%;
+  }
+  .leaderBoard{
+    max-width: 95%;
+    top:65px;
+    height: calc(100vh - 85px);
+  }
+  .userRank{
+    gap: 1rem;
+  }
+  .user{
+    gap: 0.8rem;
+  }
+  .noteWallet{
+    gap: 2px;
   }
 }

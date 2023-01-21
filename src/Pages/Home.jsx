@@ -16,7 +16,6 @@ import { useWallet } from "@solana/wallet-adapter-react";
 
 const Home = () => {
 const {publicKey}=useWallet()
-console.log(publicKey)
 const {burnBonkTokens,isDisabled}=useBonk()
 const [homeState]=useContext(HomeStateContext)
 const {loading}=homeState
