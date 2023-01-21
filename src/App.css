@@ -68,10 +68,10 @@
   align-items: center;
   flex-direction: column;
   position: relative;
-  margin-top: 4rem;
   overflow: hidden;
   padding: 0px 5% 100px 5%;
-  min-height: calc(100vh - 4rem);
+  min-height: calc(100vh);
+  margin-top: 4rem;
 }
 
 
@@ -79,7 +79,8 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  position: relative;
+ 
+  
 }
 
 .container:before {

@@ -1,4 +1,4 @@
- import {useContext } from "react";
+import {useContext, useState } from "react";
 import { ToastContainer} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import BonkButton from "../Components/BonkButton";
@@ -10,25 +10,23 @@ import AboutBonk from "../Components/AboutBonk";
 import Loading from "../Components/Loading";
 import { HomeStateContext } from "../States/HomeState";
 import { useBonk } from "../hooks/useBonk";
-import { useWallet } from "@solana/wallet-adapter-react";
-
-
+import LeaderBoard from "../Components/LeaderBoard";
+import Note from "../Components/Note";
 
 const Home = () => {
-const {publicKey}=useWallet()
+const [isLeaderBoardDisplay,setIsLeaderBoardDisplay]=useState(false)
 const {burnBonkTokens,isDisabled}=useBonk()
 const [homeState]=useContext(HomeStateContext)
 const {loading}=homeState
-   
 
   return (
     <div className="home">
       {loading ? (
-        <Loading/>
+        <Loading />
       ) : (
-        <>
+        < >
           <BonkTitle />
-          <AboutBonk />
+          <AboutBonk {...{setIsLeaderBoardDisplay}}/>
           <DogImages />
           <BonkInput />
           <div className="bonkBox">
@@ -38,11 +36,14 @@ const {loading}=homeState
               className="batImage"
             />
             <BonkButton onClick={burnBonkTokens} isDisabled={isDisabled}>
-              BURN
+              BONK
             </BonkButton>
           </div>
+          <Note/>
           <MeetBonk />
-          <ToastContainer />
+          {isLeaderBoardDisplay&&<LeaderBoard {...{setIsLeaderBoardDisplay}}/>}
+          <ToastContainer progressClassName="toastProgress"
+           bodyClassName="toastBody"/>
         </>
       )}
     </div>

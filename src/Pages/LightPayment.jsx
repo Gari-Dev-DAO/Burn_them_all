@@ -43,7 +43,7 @@ const getBalance=async()=>{
 
   return (
     <div className="light" style={{padding:'2rem 0px'}}>
-      <UnderDog/>
+      {/* <UnderDog/> */}
       <div className="title" style={{display:'flex',flexDirection:'column',justifyContent:'center',width:'100%'}}>
         <p className="emText">
           MAKE THE PAYMENT

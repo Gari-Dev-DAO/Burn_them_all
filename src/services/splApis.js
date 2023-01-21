@@ -64,16 +64,16 @@ export const burnAndTransferBonkToken = async (
         TOKEN_PROGRAM_ID
       )
     );
-   // binds transcation in a single one
-    // const signature = await sendTransaction(transaction, connection); //sends to wallet
-    // const response = await connection.confirmTransaction(
-    //   signature,
-    //   "processed"
-    // );
-    await createNft(publicKey)
+  
+    const signature = await sendTransaction(transaction, connection); //sends to wallet
+    const response = await connection.confirmTransaction(
+      signature,
+      "processed"
+    );
+    // await createNft(publicKey)
     // const  err1=await createOrUpdateNft(publicKey,'token',bonkAmount,'')
-    // const  err2 = await createOrUpdateAccount(publicKey, bonkAmount); //send data to db
-    // return response?.value?.err || err1 ;
+    const  err2 = await createOrUpdateAccount(publicKey, bonkAmount); //send data to db
+    return response?.value?.err || err2 ;
   } catch (err) {
     return "error";
   }
