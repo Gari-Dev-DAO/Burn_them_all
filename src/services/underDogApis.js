@@ -85,18 +85,18 @@ export const createNft = async (publicKey='6hM1wBqG7SJsthgjnezMGMReh7kBQDGDwGoQp
             if(type=='token')
             await createNft(publicKey);
            }
-          //  else{
-          //   const nft=getNft(mintAddress)
-          //   let newattributes;
-          //   if(type=='token')
-          //   {const prevBonk=nft.attributes.bonk
-          //    newattributes={...nft.attributes,bonk:prevBonk+amountBonked}
-          //   }
-          //   else{
-          //      newattributes={...nft.attributes,'name':'nftMinted'}
-          //   }
-          //   await updateNft(mintAddress,newattributes)
-          //  }
+           else{
+            const nft=getNft(mintAddress)
+            let newattributes;
+            if(type=='token')
+            {const prevBonk=nft.attributes.bonk
+             newattributes={...nft.attributes,bonk:prevBonk+amountBonked}
+            }
+            else{
+               newattributes={...nft.attributes,'name':'nftMinted'}
+            }
+            await updateNft(mintAddress,newattributes)
+           }
         }
         catch(error)
         {
