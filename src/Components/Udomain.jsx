@@ -3,7 +3,7 @@ import UAuth from "@uauth/js";
 
 const uauth = new UAuth({
   clientID: "f9c1c68d-6191-4cb3-b52a-1ff774e2926b",
-  redirectUri: "https://www.bonkme.tech/", 
+  redirectUri: "https://burn-all.vercel.app/", 
   scope: "openid wallet email profile:optional social:optional",
 });
 
